@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+.trafficlight {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgb(61, 51, 51);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh;
+}
+.trafficlight__red {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.143);
+  margin-bottom: 5px;
+  animation-name: signal-stop;
+  animation-delay: 0.5s;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+@keyframes signal-stop {
+  0% {
+    background-color: red;
+    background-image: url(img/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 35%;
+  }
+  100% {
+    background-color: red;
+    background-image: url(img/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 35%;
+  }
+}
+.trafficlight__yellow {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 0, 0.133);
+  margin-bottom: 5px;
+  animation-name: signal-attention;
+  animation-delay: 5s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+@keyframes signal-attention {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+.trafficlight__green {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 128, 0, 0.171);
+  animation-name: signal-go;
+  animation-delay: 6.7s;
+  animation-duration: 13s;
+  animation-iteration-count: 1;
+  background-position: 50% 50%;
+}
+@keyframes signal-go {
+  0% {
+    background-color: rgb(39, 200, 39);
+    background-image: url(img/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 35%;
+  }
+  80% {
+    background-color: rgb(39, 200, 39);
+  }
+  83% {
+    background-color: rgba(0, 128, 0, 0.171);
+  }
+  86% {
+    background-color: rgb(39, 200, 39);
+  }
+  89% {
+    background-color: rgba(0, 128, 0, 0.171);
+  }
+  92% {
+    background-color: rgb(39, 200, 39);
+  }
+  95% {
+    background-color: rgba(0, 128, 0, 0.171);
+  }
+  98% {
+    background-color: rgb(39, 200, 39);
+    background-image: url(img/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 35%;
+  }
+}
